@@ -114,10 +114,12 @@
 /*Animation_walkning (forholdstal 1,81*/
 
 #man{
+/*
     background-image: url("k%C3%B8rel%C3%A6rer-01.svg");
     background-size: cover;
     width: 6vw;
     height: 10vw;
+*/
 
     position: absolute;
     top: 24vw;
@@ -130,7 +132,42 @@
     height: 13.575vw;
     background-size: 400% 100%;
 
+    animation: move linear 4s infinite;
+
+    border: solid red 5px;
+
+
+
 }
+
+@keyframes move {
+    0%{
+        left: 90vw;
+        transform: scalex(1);
+    }
+
+    50%{ left: 9vw;
+         transform: scalex(1);
+
+
+    }
+
+    51%{ left: 9vw;
+         transform: scalex(-1);
+
+
+    }
+
+    100%{ left: 90vw;
+         transform: scalex(-1);
+
+
+
+    }
+
+}
+
+
 
 .walking{
     animation-name: walking;
@@ -148,6 +185,10 @@
         background-position: 400% 0;
     }
 }
+
+
+
+
 
 #boy{
     background-image: url("k%C3%B8reelev-01.svg");
