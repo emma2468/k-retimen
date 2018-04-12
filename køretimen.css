@@ -5,14 +5,12 @@ body{
 
 .scene{
     overflow: hidden;
-    padding: 0;
-    margin:0;
 }
 
 .baggrund {
     background-image: url("baggrund-01.svg");
     background-size: 137% 100%;
-    background-position: 90% 0;
+    background-position: 40%;
     width: 100vw;
     height: 53vw;
     z-index: 1;
@@ -44,33 +42,8 @@ body{
         left: 40wv;
     }
     to {
-        left: 2%;
+        left: 2vw;
     }
-}
-
-.koerelaerer {
-    background-image: url("k%C3%B8rel%C3%A6rer-01.svg");
-    background-size: cover;
-    width: 6vw;
-    height: 10vw;
-
-    position: absolute;
-    top: 25vw;
-    left: 90vw;
-    z-index: 3;
-}
-
-.koereelev {
-    background-image: url("k%C3%B8reelev-01.svg");
-    background-size: cover;
-    width: 8vw;
-    height: 10vw;
-    transform: scaleX(-1);
-
-    position: absolute;
-    top: 25vw;
-    left: 80vw;
-    z-index: 4;
 }
 
 /*titel-billede*/
@@ -106,7 +79,7 @@ body{
 
 /*Animation_walkning (forholdstal 1,81*/
 
-#man{
+#man_sprite{
 /*
     background-image: url("k%C3%B8rel%C3%A6rer-01.svg");
     background-size: cover;
@@ -167,12 +140,14 @@ body{
 
 
 
-#boy{
+#boy_sprite{
+/*
     background-image: url("k%C3%B8reelev-01.svg");
     background-size: cover;
     width: 8vw;
     height: 10vw;
-/*    transform: scaleX(-1);*/
+    transform: scaleX(-1);
+*/
 
     position: absolute;
     top: 24vw;
