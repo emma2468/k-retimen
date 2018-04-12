@@ -1,5 +1,12 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
 .koeretimen{
     overflow: hidden;
+    padding: 0;
+    margin:0;
 }
 
 .baggrund {
@@ -141,30 +148,19 @@
 }
 
 @keyframes move {
-    0%{
-        left: 90vw;
+    0%{ left: 90vw;
         transform: scalex(1);
     }
-
     50%{ left: 9vw;
          transform: scalex(1);
-
-
     }
-
     51%{ left: 9vw;
          transform: scalex(-1);
-
-
     }
 
     100%{ left: 90vw;
          transform: scalex(-1);
-
-
-
     }
-
 }
 
 
