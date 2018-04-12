@@ -3,7 +3,7 @@ body{
     margin: 0;
 }
 
-.koeretimen{
+.scene{
     overflow: hidden;
     padding: 0;
     margin:0;
@@ -11,27 +11,13 @@ body{
 
 .baggrund {
     background-image: url("baggrund-01.svg");
-    background-size: cover;
+    background-size: 137% 100%;
+    background-position: 90% 0;
     width: 100vw;
-    height: 50vw;
-    margin: auto;
+    height: 53vw;
     z-index: 1;
     position: relative;
 }
-
-/*
-@keyframe baggrund {
-    0% {
-        transform: translateX(-100%) scale(4);
-    }
-    50%{
-        transform: translateX(0) scale(4);
-    }
-    100%{
-        transform: translateX(0) scale(4);
-    }
-}
-*/
 
 .blaabil {
     background-image: url("bl%C3%A5bil.svg");
@@ -46,7 +32,7 @@ body{
     z-index: 2;
 
     animation-name: blaabil;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -55,10 +41,10 @@ body{
 
 @keyframes blaabil {
     from {
-        left: 100%;
+        left: 40wv;
     }
     to {
-        left: -100%;
+        left: 2%;
     }
 }
 
@@ -139,31 +125,9 @@ body{
     height: 13.575vw;
     background-size: 400% 100%;
 
-    animation: move linear 4s infinite;
-
-    border: solid red 5px;
-
 
 
 }
-
-@keyframes move {
-    0%{ left: 90vw;
-        transform: scalex(1);
-    }
-    50%{ left: 9vw;
-         transform: scalex(1);
-    }
-    51%{ left: 9vw;
-         transform: scalex(-1);
-    }
-
-    100%{ left: 90vw;
-         transform: scalex(-1);
-    }
-}
-
-
 
 .walking{
     animation-name: walking;
@@ -171,7 +135,24 @@ body{
     animation-timing-function: steps(4);
     animation-iteration-count: infinite;
 
+    animation: move linear 10s infinite;
 }
+
+
+@keyframes move {
+    0%{ left: 90vw;
+        transform: scalex(1);
+
+    }
+    50%{ left: 65vw;
+         transform: scalex(1);
+    }
+
+}
+
+
+
+
 
 @keyframes walking{
     0%{
