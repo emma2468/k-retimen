@@ -5,9 +5,6 @@ body{
 
 .scene{
     overflow: hidden;
-}
-
-.baggrund {
     background-image: url("baggrund-01.svg");
     background-size: 137% 100%;
     background-position: 40%;
@@ -16,6 +13,8 @@ body{
     z-index: 1;
     position: relative;
 }
+
+
 
 .blaabil {
     background-image: url("bl%C3%A5bil.svg");
@@ -53,21 +52,17 @@ body{
     display: flex;
     flex-basis: wrap;
     width: 100%;
-
 }
 
 .start {
-
     display: inline-block;
     text-decoration: none;
     font-family: Futura, sans-serif;
-    /*    background-color: blue;*/
     margin: auto;
     margin-top: 3em;
     margin-bottom: 3em;
     padding: 2em;
     border: 0.5em;
-/*    opacity: 0.8;*/
     color: #681515;
     font-size: 4em;
     text-shadow: 1px 1px #992222, 2px 2px #992222, 3px 3px #992222, 4px 4px #992222, 5px 5px #992222, 6px 6px #992222, 7px 7px #992222, 8px 8px #992222, 9px 9px #992222, 10px 10px #992222, 11px 11px #992222, 12px 12px #992222, 13px 13px #992222, 14px 14px #992222, 15px 15px #992222, 16px 16px #992222, 17px 17px #992222, 18px 18px #992222, 19px 19px #992222, 20px 20px #992222, 21px 21px #992222, 22px 22px #992222, 23px 23px #992222, 24px 24px #992222, 25px 25px #992222, 26px 26px #992222, 27px 27px #992222;
@@ -78,28 +73,18 @@ body{
 }
 
 /*Animation_walkning (forholdstal 1,81*/
-
-#man_sprite{
-/*
-    background-image: url("k%C3%B8rel%C3%A6rer-01.svg");
-    background-size: cover;
-    width: 6vw;
-    height: 10vw;
-*/
-
+#man_container{
     position: absolute;
     top: 24vw;
     left: 90vw;
     z-index: 3;
+}
 
-    position: absolute;
+#man_sprite{
     background-image: url(man-01.svg);
     width: 7.5vw;
     height: 13.575vw;
     background-size: 400% 100%;
-
-
-
 }
 
 .walking{
@@ -107,25 +92,7 @@ body{
     animation-duration: 1s;
     animation-timing-function: steps(4);
     animation-iteration-count: infinite;
-
-    animation: move linear 10s infinite;
 }
-
-
-@keyframes move {
-    0%{ left: 90vw;
-        transform: scalex(1);
-
-    }
-    50%{ left: 65vw;
-         transform: scalex(1);
-    }
-
-}
-
-
-
-
 
 @keyframes walking{
     0%{
@@ -136,24 +103,33 @@ body{
     }
 }
 
+.moveing{
+    animation-name: moveing;
+    animation-direction: linear;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
 
+@keyframes moveing {
+    0%{ left: 115vw;
+        transform: scalex(1);
+    }
+    100%{ left: 90;
+         transform: scalex(1);
+    }
+}
 
 
-#boy_sprite{
-/*
-    background-image: url("k%C3%B8reelev-01.svg");
-    background-size: cover;
-    width: 8vw;
-    height: 10vw;
-    transform: scaleX(-1);
-*/
-
+#boy_container{
     position: absolute;
     top: 24vw;
     left: 80vw;
     z-index: 4;
+}
 
+#boy_sprite{
     position: absolute;
     background-image: url(boy02-01.svg);
     width: 7.5vw;
@@ -177,29 +153,19 @@ body{
     }
 }
 
-/*
-#man_container{
-    position: absolute;
-}
-
-.man_move_right{
-    animation-name: man_move_right_kf;
-    animation-duration: 1s;
+.move{
+    animation-name: move;
+    animation-direction: linear;
+    animation-duration: 7s;
     animation-iteration-count: 1;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
 }
 
-#man_sprite{
-    background-image: url(man-01.svg);
-    width: 20vw;
-    height: 28.57vw;
-    background-size: 400%
+@keyframes move {
+    0%{ left: 105vw;
+        transform: scalex(1);
+    }
+    100%{ left: 80vw;
+         transform: scalex(1);
+    }
 }
-.man_walkcycle{
-    animation-name: man_walkcycle_kf;
-    animation-duration: 1s;
-    animation: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(4);
-}
-*/
