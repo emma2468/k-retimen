@@ -172,9 +172,20 @@ body{
     background-size: 100%;
     width:50vw;
     height: 30vw;
+
+}
+
+.tekstboks_container_out{
+    left: -55vw;
+    top: 11vw;
+}
+
+.tekstboks_container_in{
     left: 26vw;
     top: 11vw;
+}
 
+.slide{
     animation-name: slide;
     animation-direction: linear;
     animation-duration: 5s;
@@ -201,9 +212,20 @@ body{
     background-size: 100%;
     width: 10vw;
     height: 10vw;
+
+}
+
+.knapja_container_out{
+    left: 105vw;
+    top: 28vw;
+}
+
+.knapja_container_in{
     left: 40vw;
     top: 28vw;
+}
 
+.slide_ja{
     animation-name: slide_ja;
     animation-direction: linear;
     animation-duration: 5s;
@@ -230,16 +252,26 @@ body{
     background-size: 100%;
     width: 10vw;
     height: 10vw;
+
+}
+
+.knapnej_container_out{
+    left: 115vw;
+    top: 28vw;
+}
+
+.knapnej_container_in{
     left: 50vw;
     top: 28vw;
+}
 
+.slide_nej{
     animation-name: slide_nej;
     animation-direction: linear;
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
 @keyframes slide_nej{
     0%{
         left: 115vw;
