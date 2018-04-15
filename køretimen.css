@@ -164,21 +164,55 @@ body{
     }
 }
 
+#youlose_container{
+    position:absolute;
+    background-image: url(youlose-01.svg);
+    z-index: 7;
+    background-size: 100%;
+    width: 50vw;
+    height: 50vw;
+}
+
+.youlose_container_out{
+    left: 25vw;
+    top: -50vw;
+}
+
+.youlose_container_in{
+    left: 25vw;
+    top: 1.5vw;
+}
+
+.slide_youlose{
+    animation-name: slide_youlose;
+    animation-direction: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide_youlose{
+    0%{
+        left: 100vw;
+        transform: scalex(1);
+    }
+
+    100%{
+        left: 25vw;
+        transform: scalex(1);
+    }
+}
+
 
 #tekstboks_container{
     position: absolute;
     background-image: url(tekstboks-01.svg);
     z-index: 5;
     background-size: 100%;
-<<<<<<< HEAD
-    width:40vw;
+    width: 40vw;
     height: 20vw;
-    left: 26vw;
-    top: 11vw;
+    margin: auto;
     padding: 2em;
-=======
-    width:50vw;
-    height: 30vw;
 
 }
 
@@ -191,7 +225,6 @@ body{
     left: 26vw;
     top: 11vw;
 }
->>>>>>> koeretime/master
 
 .slide{
     animation-name: slide;
@@ -220,17 +253,9 @@ body{
 
 #knapja_container{
     position: absolute;
-    background-image: url(knap-gr%C3%B8n-01.svg);
+    background-image: url(knap-ja-01.svg);
     z-index: 6;
     background-size: 100%;
-<<<<<<< HEAD
-    width: 6vw;
-    height: 6vw;
-    left: 35vw;
-    top: 25vw;
-    margin: auto;
-    padding: 0.9em;
-=======
     width: 10vw;
     height: 10vw;
 
@@ -245,7 +270,7 @@ body{
     left: 40vw;
     top: 28vw;
 }
->>>>>>> koeretime/master
+
 
 .slide_ja{
     animation-name: slide_ja;
@@ -253,13 +278,6 @@ body{
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-
-.ja{
-    text-decoration: none;
-    font-family: Futura, sans-serif;
-    color: white;
-    font-size: 1.5em;
 }
 
 @keyframes slide_ja{
@@ -275,21 +293,11 @@ body{
 
 #knapnej_container{
     position: absolute;
-    background-image: url(knap-r%C3%B8d-01.svg);
+    background-image: url(knap-nej-01.svg);
     z-index: 6;
     background-size: 100%;
-<<<<<<< HEAD
-    width: 6vw;
-    height: 6vw;
-    left: 55vw;
-    top: 25vw;
-    margin: auto;
-    padding: 0.9em;
-
-=======
     width: 10vw;
     height: 10vw;
-
 }
 
 .knapnej_container_out{
@@ -301,7 +309,7 @@ body{
     left: 50vw;
     top: 28vw;
 }
->>>>>>> koeretime/master
+
 
 .slide_nej{
     animation-name: slide_nej;
@@ -309,14 +317,6 @@ body{
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-<<<<<<< HEAD
-
-.nej{
-    text-decoration: none;
-    font-family: Futura, sans-serif;
-    color: white;
-    font-size: 1.5em;
 }
 
 @keyframes slide_nej{
@@ -326,7 +326,7 @@ body{
     }
     100%{
         left:50vw;
-=======
+
 @keyframes slide_nej{
     0%{
         left: 115vw;
@@ -334,7 +334,7 @@ body{
     }
     100%{
         left: 50vw;
->>>>>>> koeretime/master
         transform: scalex(1);
     }
 }
+
