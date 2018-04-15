@@ -206,14 +206,14 @@ body{
 
     animation-name: slide_ja;
     animation-direction: linear;
-    animation-duration 5s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 @keyframes slide_ja{
     0%{
-        left: 110vw;
+        left: 105vw;
         transform: scalex(1);
     }
     100%{
@@ -235,7 +235,18 @@ body{
 
     animation-name: slide_nej;
     animation-direction: linear;
-    animation-duration 5s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+@keyframes slide_nej{
+    0%{
+        left: 115vw;
+        transform: scalex(1);
+    }
+    100%{
+        left: 50vw;
+        transform: scalex(1);
+    }
 }
