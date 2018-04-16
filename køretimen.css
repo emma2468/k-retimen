@@ -14,36 +14,6 @@ body{
     position: relative;
 }
 
-#blaabil_container{
-    position: absolute;
-    top: 25vw;
-    left: 65vw;
-    z-index: 2;
-}
-
-#blaabil_sprite {
-    background-image: url("bl%C3%A5bil.svg");
-    background-size: cover;
-    background size: 100%;
-    width: 15vw;
-    height: 8.3vw;
-
-    animation-name: blaabil;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes blaabil {
-    from {
-        left: 40wv;
-    }
-    to {
-        left: 2vw;
-    }
-}
-
 /*titel-billede*/
 
 .start_koeretime {
@@ -100,8 +70,8 @@ body{
     }
 }
 
-.moveing{
-    animation-name: moveing;
+.moveing_in{
+    animation-name: moveing_in;
     animation-direction: linear;
     animation-duration: 7s;
     animation-iteration-count: 1;
@@ -109,15 +79,33 @@ body{
 }
 
 
-@keyframes moveing {
+@keyframes moveing_in{
     0%{ left: 115vw;
         transform: scalex(1);
     }
-    100%{ left: 90;
+    100%{ left: 90vw;
          transform: scalex(1);
     }
 }
 
+.moveing_tocar{
+    animation-name: moveing_tocar;
+    animation-direction: linear;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveing_tocar{
+    0%{
+        left: 90vw;
+        transform: scalex(1);
+    }
+    100%{
+        left: 73vw;
+        transform: scalex(1);
+    }
+}
 
 #boy_container{
     position: absolute;
@@ -147,15 +135,15 @@ body{
     }
 }
 
-.move{
-    animation-name: move;
+.move_in{
+    animation-name: move_in;
     animation-direction: linear;
     animation-duration: 7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes move {
+@keyframes move_in{
     0%{ left: 105vw;
         transform: scalex(1);
     }
@@ -164,44 +152,25 @@ body{
     }
 }
 
-#youlose_container{
-    position:absolute;
-    background-image: url(youlose-01.svg);
-    z-index: 7;
-    background-size: 100%;
-    width: 50vw;
-    height: 50vw;
-}
-
-.youlose_container_out{
-    left: 25vw;
-    top: -50vw;
-}
-
-.youlose_container_in{
-    left: 25vw;
-    top: 1.5vw;
-}
-
-.slide_youlose{
-    animation-name: slide_youlose;
+.move_tocar{
+    animation-name: move_tocar;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes slide_youlose{
+@keyframes move_tocar{
     0%{
-        left: 100vw;
+        left: 80vw;
         transform: scalex(1);
     }
-
     100%{
-        left: 25vw;
+        left: 66vw;
         transform: scalex(1);
     }
 }
+
 
 
 #tekstboks_container{
@@ -326,6 +295,9 @@ body{
     }
     100%{
         left:50vw;
+        transform: scalex(1);
+    }
+}
 
 @keyframes slide_nej{
     0%{
@@ -334,6 +306,244 @@ body{
     }
     100%{
         left: 50vw;
+        transform: scalex(1);
+    }
+ }
+
+#youlose_container{
+    position: absolute;
+    background-image: url(youlose-01.svg);
+    z-index: 7;
+    background-size: 100%;
+    width: 50vw;
+    height: 50vw;
+}
+
+.youlose_container_out{
+    left: -105vw;
+    top: 1.5vw;
+}
+
+.youlose_container_in{
+    left: 25vw;
+    top: 1.5vw;
+}
+
+.slide_youlose{
+    animation-name: slide_youlose;
+    animation-direction: linear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide_youlose;
+    0%{
+        left: -105%;
+        transform: scalex(1);
+    }
+    100%{
+        left: 25vw;
+        transform: scalex(1);
+}
+
+#tekstboks_container_02{
+    position: absolute;
+    background-image: url(tekstboks-01.svg);
+    z-index: 5;
+    background-size: 100%;
+    width: 40vw;
+    height: 20vw;
+    margin: auto;
+    padding: 2em;
+
+}
+
+.tekstboks_container_02_out{
+    left: -55vw;
+    top: 11vw;
+}
+
+.tekstboks_container_02_in{
+    left: 26vw;
+    top: 11vw;
+}
+
+.slide_02{
+    animation-name: slide_02;
+    animation-direction: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.hvilkeparkeringsformvildubenytte{
+    font-family: Futura, sans-serif;
+
+}
+
+@keyframes slide_02{
+    0%{
+        left: -105vw;
+        transform: scalex(1);
+    }
+
+    100%{
+        left:26vw;
+        transform: scalex(1);
+    }
+}
+
+#forlaens_container{
+    position: absolute;
+    background-image: url(forl%C3%A6ns-01.svg);
+    z-index: 10;
+    background-size: 100%;
+    width: 16vw;
+    height: 8vw;
+}
+
+.forlaens_container_out{
+    left: 115vw;
+    top: 28vw;
+}
+
+.forlaens_container_in{
+    left: 50vw;
+    top: 28vw;
+}
+
+
+.slide_forlaens{
+    animation-name: slide_forlaens;
+    animation-direction: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide_forlaens{
+    0%{
+        left: 115vw;
+        transform: scalex(1);
+    }
+    100%{
+        left:53vw;
+        transform: scalex(1);
+    }
+}
+
+@keyframes slide_forlaens{
+    0%{
+        left: 115vw;
+        transform: scalex(1);
+    }
+    100%{
+        left: 53vw;
+        transform: scalex(1);
+    }
+ }
+
+#baglaens_container{
+    position: absolute;
+    background-image: url(bagl%C3%A6ns-01.svg);
+    z-index: 10;
+    background-size: 100%;
+    width: 16vw;
+    height: 8vw;
+}
+
+.baglaens_container_out{
+    left: 105vw;
+    top: 28vw;
+}
+
+.baglaens_container_in{
+    left: 40vw;
+    top: 28vw;
+}
+
+
+.slide_baglaens{
+    animation-name: slide_baglaens;
+    animation-direction: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide_baglaens{
+    0%{
+        left: 105vw;
+        transform: scalex(1);
+    }
+    100%{
+        left:33vw;
+        transform: scalex(1);
+    }
+}
+
+@keyframes slide_baglaens{
+    0%{
+        left: 105vw;
+        transform: scalex(1);
+    }
+    100%{
+        left: 33vw;
+        transform: scalex(1);
+    }
+ }
+
+#blaabil_container{
+    position: absolute;
+    top: 25vw;
+    left: 65vw;
+    z-index: 2;
+}
+
+#blaabil_sprite{
+    background-image: url(bl%C3%A5bil.svg);
+    background-size: 100%;
+    width: 15vw;
+    height: 8.2vw;
+}
+
+.drive_short{
+    animation-name: drive_short;
+    animation-direction: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drive_short{
+    0%{
+        left: 65vw;
+        transform: scalex(1);
+    }
+
+    100%{
+        left:30vw;
+        transform: scalex(1);
+    }
+}
+
+.drive_long{
+    animation-name: drive_long;
+    animation-direction: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drive_long{
+    0%{
+        left: 65vw;
+        transform: scalex(1);
+    }
+
+    100%{
+        left: 2vw;
         transform: scalex(1);
     }
 }
