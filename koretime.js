@@ -5,11 +5,16 @@ $("#loseVises").on("click", loseVises);
 $("#hentilbil").on("click", hentilbil);
 $("#indibil").on("click", indibil);
 $("#parkeringsform").on("click", parkeringsform);
+$("#parkshortin").on("click", driveshort_in);
+$("#knapper").on("click", knapperFrem);
 
 $("#knapnej_container").on("click", loseVises);
 $("#knapja_container").on("click", hentilbil);
 $("#forlaens_container").on("click", driveshort);
 $("#baglaens_container").on("click", drivelong);
+$("#knap_1").on("click", driveto_1);
+$("#knap_2").on("click", driveto_2);
+$("#knap_3").on("click", driveto_3);
 
 
 function scenenVises(){
@@ -113,6 +118,14 @@ function driveshort(){
     $("#blaabil_container").addClass("drive_short");
 }
 
+function driveshort_in(){
+    console.log("driveshort_in");
+
+    $("#blaabil_container").removeClass("drive_short");
+
+    $("#blaabil_container").addClass("drive_short_in");
+}
+
 function drivelong(){
     console.log("drivelong");
 
@@ -124,6 +137,44 @@ function drivelong(){
     $("#baglaens_container").removeClass("baglaens_container_in");
 
     $("#blaabil_container").addClass("drive_long");
+}
+
+function knapperFrem(){
+    console.log("knapperFrem");
+
+    $("#knap_1").addClass("knap_1_anim");
+    $("#knap_2").addClass("knap_2_anim");
+    $("#knap_3").addClass("knap_3_anim");
+}
+
+function driveto_1(){
+    console.log("driveto_1");
+
+    $("#knap_1").removeClass("knap_1_anim");
+
+    $("#knap_2").addClass("knap_2_anim");
+    $("#knap_3").addClass("knap_3_anim");
+    $("#blaabil_container").addClass("driveto_1");
+}
+
+function driveto_2(){
+    console.log("driveto_2");
+
+    $("#knap_1").removeClass("knap_1_anim");
+    $("#knap_2").removeClass("knap_2_anim");
+
+    $("#knap_3").addClass("knap_3_anim");
+    $("#blaabil_container").addClass("driveto_2");
+}
+
+function driveto_3(){
+    console.log("driveto_3");
+
+    $("#knap_1").removeClass("knap_1_anim");
+    $("#knap_2").removeClass("knap_2_anim");
+    $("#knap_3").removeClass("knap_3_anim");
+
+    $("#blaabil_container").addClass("driveto_3");
 }
 
 
