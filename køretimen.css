@@ -94,7 +94,7 @@ body {
 .moveing_tocar {
     animation-name: moveing_tocar;
     animation-direction: linear;
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -113,8 +113,24 @@ body {
 }
 
 .man_container_position_out {
-    left: 115vw;
-    top: 24vw;
+    animation-name: man_container_position_out;
+    animation-direction: linear;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes man_container_position_out {
+    0%{
+        left: 73vw;
+        top: 24vw;
+        transform: scalex(1);
+    }
+    100%{
+        left: 115vw;
+        top: 24vw;
+        transform: scalex(1);
+    }
 }
 
 #boy_container {
@@ -167,7 +183,7 @@ body {
 .move_tocar {
     animation-name: move_tocar;
     animation-direction: linear;
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -186,8 +202,24 @@ body {
 }
 
 .boy_container_position_out {
-    left: 105vw;
-    top: 24vw;
+    animation-name: boy_container_position_out;
+    animation-direction: linear;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes boy_container_position_out {
+    0%{
+        left: 66vw;
+        top: 24vw;
+        transform: scalex(1);
+    }
+    100%{
+        left: 105vw;
+        top: 24vw;
+        transform: scalex(1);
+    }
 }
 
 #tekstboks_container {
@@ -214,7 +246,7 @@ body {
 .slide {
     animation-name: slide;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -259,7 +291,7 @@ body {
 .slide_ja {
     animation-name: slide_ja;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -298,7 +330,7 @@ body {
 .slide_nej {
     animation-name: slide_nej;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -388,7 +420,7 @@ body {
 .slide_02 {
     animation-name: slide_02;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -433,7 +465,7 @@ body {
 .slide_forlaens {
     animation-name: slide_forlaens;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -483,7 +515,7 @@ body {
 .slide_baglaens {
     animation-name: slide_baglaens;
     animation-direction: linear;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

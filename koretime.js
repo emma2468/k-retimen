@@ -1,13 +1,5 @@
 $(window).on("load", scenenVises);
 
-$("#scenenVises").on("click", walkSlut);
-$("#loseVises").on("click", loseVises);
-$("#hentilbil").on("click", hentilbil);
-$("#indibil").on("click", indibil);
-$("#parkeringsform").on("click", parkeringsform);
-$("#parkshortin").on("click", driveshort_in);
-$("#knapper").on("click", knapperFrem);
-
 $("#knapnej_container").on("click", loseVises);
 $("#knapja_container").on("click", hentilbil);
 $("#forlaens_container").on("click", driveshort);
@@ -35,6 +27,8 @@ function scenenVises(){
     $("#boy_container").on("animationend", walkSlut);
     $("#man_container").on("animationend", walkSlut);
 
+    $("#baggrundsmusik")[0].play();
+    $("#baggrundsmusik")[0].volumen = 0;
 }
 
 function walkSlut(){
@@ -110,11 +104,13 @@ function indibil(){
     $("#man_container").addClass("man_container_position_out");
     $("#boy_container").addClass("boy_container_position_out");
 
-    $(".move_tocar .moveing_tocar").on("animationend", parkeringsform);
+    $(".man_container_position_out").on("animationend", parkeringsform);
 }
 
 function parkeringsform(){
     console.log("parkeringsform");
+
+    $(".man_container_position_out").off("animationend", parkeringsform);
 
     $("#tekstboks_container_02").addClass("slide_02");
     $("#tekstboks_container_02").addClass("tekstboks_container_02_in");
@@ -127,12 +123,15 @@ function parkeringsform(){
 function driveshort(){
     console.log("driveshort");
 
+    $("#youwin_container").addClass("youwin_container_out");
+
     $("#tekstboks_container_02").removeClass("slide_02");
     $("#tekstboks_container_02").removeClass("tekstboks_container_02_in");
     $("#forlaens_container").removeClass("slide_forlaens");
     $("#baglaens_container").removeClass("slide_baglaens");
     $("#forlaens_container").removeClass("forlaens_container_in");
     $("#baglaens_container").removeClass("baglaens_container_in");
+
 
     $("#blaabil_container").addClass("drive_short");
     $(".drive_short").on("animationend", driveshort_in);
@@ -146,8 +145,9 @@ function driveshort_in(){
     $("#blaabil_container").removeClass("drive_short");
     $("#youwin_container").removeClass("youwin_container_out");
 
-    $("#blaabil_container").addClass("drive_short_in");
     $("#youwin_container").addClass("youwin_container_in");
+    $("#blaabil_container").addClass("drive_short_in");
+    $(".drive_short_in").on("animationend", youwin);
 }
 
 function drivelong(){
@@ -161,10 +161,14 @@ function drivelong(){
     $("#baglaens_container").removeClass("baglaens_container_in");
 
     $("#blaabil_container").addClass("drive_long");
+
+    $(".drive_long").on("animationend", knapperFrem);
 }
 
 function knapperFrem(){
     console.log("knapperFrem");
+
+    $(".drive_long").off("animationend", knapperFrem);
 
     $("#knap_1").addClass("knap_1_anim");
     $("#knap_2").addClass("knap_2_anim");
@@ -199,6 +203,11 @@ function driveto_3(){
     $("#knap_3").removeClass("knap_3_anim");
 
     $("#blaabil_container").addClass("driveto_3");
+    $(".driveto_3").on("animationend", youwin);
+}
+
+function youwin(){
+    $("#youwin_container").addClass("youwin_container_in");
 }
 
 
