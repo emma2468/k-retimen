@@ -29,11 +29,19 @@ function scenenVises(){
     $("#tekstboks_container_02").addClass("tekstboks_container_02_out");
     $("#forlaens_container").addClass("forlaens_container_out");
     $("#baglaens_container").addClass("baglaens_container_out");
+    $("#youwin_container").addClass("youwin_container_out");
+
+
+    $("#boy_container").on("animationend", walkSlut);
+    $("#man_container").on("animationend", walkSlut);
+
 }
 
 function walkSlut(){
     console.log("walkSlut");
 
+    $("#boy_container").off("animationend", walkSlut);
+    $("#man_container").off("animationend", walkSlut);
     $("#tekstboks_container").removeClass("tekstboks_container_out");
     $("#knapja_container").removeClass("knapja_container_out");
     $("#knapja_container").removeClass("knapja_container_out");
@@ -45,8 +53,6 @@ function walkSlut(){
     $("#knapja_container").addClass("knapja_container_in");
     $("#knapnej_container").addClass("knapnej_container_in");
     $("#youlose_container").addClass("youlose_container_out");
-
-    $
 }
 
 function loseVises(){
@@ -82,16 +88,29 @@ function hentilbil(){
     $("#man_container").addClass("moveing_tocar");
     $("#boy_container").addClass("move_tocar");
  $("#tekstboks_container").addClass("tekstboks_container_out");
+
+    $("#man_container").on("animationend", indibil);
 }
+
 
 function indibil(){
     console.log("indibil");
 
+    $("#man_container").off("animationend", indibil);
     $("#man_container").removeClass("moveing_tocar");
     $("#boy_container").removeClass("move_tocar");
+
+    $("#man_container").removeClass("moveing_in");
+    $("#boy_container").removeClass("move_in");
+
     $("#tekstboks_container_02").addClass("tekstboks_container_02_out");
     $("#forlaens_container").addClass("forlaens_container_out");
     $("#baglaens_container").addClass("baglaens_container_out");
+
+    $("#man_container").addClass("man_container_position_out");
+    $("#boy_container").addClass("boy_container_position_out");
+
+    $(".move_tocar .moveing_tocar").on("animationend", parkeringsform);
 }
 
 function parkeringsform(){
@@ -116,14 +135,19 @@ function driveshort(){
     $("#baglaens_container").removeClass("baglaens_container_in");
 
     $("#blaabil_container").addClass("drive_short");
+    $(".drive_short").on("animationend", driveshort_in);
+
 }
 
 function driveshort_in(){
     console.log("driveshort_in");
 
+    $(".drive_short").off("animationend", driveshort_in);
     $("#blaabil_container").removeClass("drive_short");
+    $("#youwin_container").removeClass("youwin_container_out");
 
     $("#blaabil_container").addClass("drive_short_in");
+    $("#youwin_container").addClass("youwin_container_in");
 }
 
 function drivelong(){
@@ -176,5 +200,7 @@ function driveto_3(){
 
     $("#blaabil_container").addClass("driveto_3");
 }
+
+
 
 
