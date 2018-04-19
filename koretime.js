@@ -27,6 +27,8 @@ function scenenVises(){
     $("#boy_container").on("animationend", walkSlut);
     $("#man_container").on("animationend", walkSlut);
 
+    $("#gang")[0].play();
+    $("#gang")[0].volumen = 0;
     $("#baggrundsmusik")[0].play();
     $("#baggrundsmusik")[0].volumen = 0;
 }
@@ -65,6 +67,11 @@ function loseVises(){
     $("#knapnej_container").addClass("knapnej_container_out");
     $("#youlose_container").addClass("slide_youlose");
     $("#youlose_container").addClass("youlose_container_in");
+
+    $("#youlose_lyd")[0].play();
+    $("#youlose_lyd")[0].volumen = 0;
+    $("#baggrundsmusik")[0].pause();
+
 }
 
 function hentilbil(){
@@ -208,6 +215,10 @@ function driveto_3(){
 
 function youwin(){
     $("#youwin_container").addClass("youwin_container_in");
+
+    $("#youwin_lyd")[0].play();
+    $("#youwin_lyd")[0].volumen = 0;
+    $("#baggrundsmusik")[0].pause();
 }
 
 
