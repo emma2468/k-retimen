@@ -553,7 +553,7 @@ body {
     background-image: url(bl%C3%A5bil.svg);
     background-size: 100%;
     width: 15vw;
-    height: 8.2vw;
+    height: 8.1vw;
 }
 
 .drive_short {
@@ -703,10 +703,15 @@ body {
     animation-fill-mode: forwards;
 }
 
+.knap_1_out {
+    left: -105vw;
+    top: 19vw;
+}
+
 @keyframes knap_1_anim {
     0% {
-        left: -5vw;
-        top: -5vw;
+        left: -105vw;
+        top: -105vw;
     }
     100% {
         left: 12vw;
@@ -731,10 +736,15 @@ body {
     animation-fill-mode: forwards;
 }
 
+.knap_2_out {
+    left: -105vw;
+    top: 19vw;
+}
+
 @keyframes knap_2_anim {
     0% {
-        left: -5vw;
-        top: -5vw;
+        left: -105vw;
+        top: -105vw;
     }
     100% {
         left: 31vw;
@@ -759,10 +769,15 @@ body {
     animation-fill-mode: forwards;
 }
 
+.knap_3_out {
+    left: -105vw;
+    top: 17vw;
+}
+
 @keyframes knap_3_anim {
     0% {
-        left: -5vw;
-        top: -5vw;
+        left: -105vw;
+        top: -105vw;
     }
     100% {
         left: 19vw;
@@ -790,7 +805,7 @@ body {
 }
 
 .slide_youwin {
-    animation-name: slide_youlose;
+    animation-name: slide_youwin;
     animation-direction: linear;
     animation-duration: 3s;
     animation-iteration-count: 1;

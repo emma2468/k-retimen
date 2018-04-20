@@ -8,7 +8,6 @@ $("#knap_1").on("click", driveto_1);
 $("#knap_2").on("click", driveto_2);
 $("#knap_3").on("click", driveto_3);
 
-
 function scenenVises(){
     console.log("scenenVises");
 
@@ -22,7 +21,10 @@ function scenenVises(){
     $("#forlaens_container").addClass("forlaens_container_out");
     $("#baglaens_container").addClass("baglaens_container_out");
     $("#youwin_container").addClass("youwin_container_out");
-
+    $("#gaatilstart_container").addClass("youwin_container_out");
+    $("#knap_3").addClass("knap_3_out");
+    $("#knap_2").addClass("knap_2_out");
+    $("#knap_1").addClass("knap_1_out");
 
     $("#boy_container").on("animationend", walkSlut);
     $("#man_container").on("animationend", walkSlut);
@@ -31,6 +33,10 @@ function scenenVises(){
     $("#gang")[0].volumen = 0;
     $("#baggrundsmusik")[0].play();
     $("#baggrundsmusik")[0].volumen = 0;
+    $("#billarm")[0].play();
+    $("#billarm")[0].volumen = 1;
+    $("#youwin_lyd")[0].pause();
+    $("#youlose_lyd")[0].pause();
 }
 
 function walkSlut(){
@@ -92,7 +98,6 @@ function hentilbil(){
 
     $("#man_container").on("animationend", indibil);
 }
-
 
 function indibil(){
     console.log("indibil");
@@ -214,13 +219,13 @@ function driveto_3(){
 }
 
 function youwin(){
+    console.log("youwin");
+
     $("#youwin_container").addClass("youwin_container_in");
+    $("#youwin_container").addClass("slide_youwin");
+
 
     $("#youwin_lyd")[0].play();
     $("#youwin_lyd")[0].volumen = 0;
     $("#baggrundsmusik")[0].pause();
 }
-
-
-
-
